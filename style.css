@@ -1,0 +1,143 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("fon.jpg");
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#loading {
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+    font-family: 'YourCustomFont', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -300px; 
+        0 0 5px rgba(0, 0, 0, 0.8), /* Черная тень */
+        0 0 10px rgba(0, 0, 0, 0.7), /* Более сильная тень */
+        0 0 15px rgba(255, 255, 255, 1), /* Белое сияние */
+        0 0 20px rgba(255, 255, 255, 1); /* Более сильное белое сияние */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 1); /* Темная обводка текста */
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#flipButton {
+    position: fixed; 
+    bottom: 13%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#flipButton:hover {
+    background-color: #45a049;
+}
+
+#resetButton {
+    position: fixed; 
+    bottom: 7%; /* Положение кнопки Reset чуть выше */
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 15px 30px; /* Размер кнопки */
+    font-size: 20px; /* Размер шрифта */
+    color: white; /* Цвет текста */
+    background-color: #f44336; /* Цвет фона для кнопки Reset */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+#resetButton:hover {
+    background-color: #d32f2f; /* Цвет фона при наведении */
+}
+
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('saira-extracondensed-semibold.woff2') format('woff2');
+}
+
+#result {
+    font-family: 'YourCustomFont', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -300px; 
+        0 0 5px rgba(0, 0, 0, 0.8), /* Черная тень */
+        0 0 10px rgba(0, 0, 0, 0.7), /* Более сильная тень */
+        0 0 15px rgba(255, 255, 255, 1), /* Белое сияние */
+        0 0 20px rgba(255, 255, 255, 1); /* Более сильное белое сияние */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 1); /* Темная обводка текста */
+}
+
+.coin {
+    position: fixed; 
+    width: 200px; 
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px; 
+}
+
+@keyframes flip {
+    0% { transform: rotateY(0); }
+    100% { transform: rotateY(1080deg); }
+}
+
+.flipping {
+    animation: flip 2s ease-in-out; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Занимает всю высоту экрана */
+    background-color: #282c34; /* Фоновый цвет */
+    color: white; /* Цвет текста */
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin {
+    width: 250px; /* Ширина монетки */
+    height: 250px; /* Высота монетки */
+    background-size: cover; /* Чтобы изображение заполняло элемент */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+#result {
+    font-size: 45px; /* Размер текста результата */
+    margin-bottom: 60px; /* Отступ снизу */
+}
+
+button {
+    padding: 10px 20px; /* Отступы для кнопок */
+    font-size: 18px; /* Размер шрифта кнопок */
+    cursor: pointer; /* Курсор при наведении */
